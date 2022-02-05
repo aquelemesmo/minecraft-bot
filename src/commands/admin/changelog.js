@@ -6,7 +6,7 @@ module.exports.run = async (bot,message,args) => {
     let perguntas = [
         "Informe o ID do usuario",
         "Essa ação foi demotado, adicionado ou promovido? (demotado/promovido/adicionado)",
-        "Mencione o cargo ou coloque o ID do cargo",
+        "Mencione o cargo",
         "Coloque a data de hoje."
     ]
 
@@ -23,7 +23,7 @@ module.exports.run = async (bot,message,args) => {
     })
 
     collect.on("end", (e) => {
-        const canal = bot.channels.cache.get("935145629573873674")
+        const canal = bot.channels.cache.get("ID_DO_CANAL_CHANGELOG")
 
         if(respostas[1] === "demotado") {
             const embedDemotado = new MessageEmbed()
